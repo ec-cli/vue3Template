@@ -1,0 +1,113 @@
+/**
+* element-plus 样式覆盖
+*/
+
+.el-table {
+  .el-button {
+    &.is-text {
+      padding: 6px;
+    }
+  }
+  .el-button + .el-button {
+    margin-left: 6px;
+  }
+}
+
+.el-card {
+  --el-card-border-radius: 2px !important;
+}
+
+.el-icon {
+  vertical-align: middle;
+}
+
+.el-header {
+  --el-header-padding: 0 0px !important;
+}
+
+.el-dialog {
+  .el-dialog__header {
+    margin: 0 !important;
+    padding: 0 20px !important;
+    height: 54px !important;
+    line-height: 54px !important;
+    .el-dialog__headerbtn {
+      top: 0 !important;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 10px 20px !important;
+  }
+
+  .el-dialog__footer {
+    padding: 10px 20px !important;
+    // border-top: 1px solid var(--base-box-shadow-color);
+  }
+}
+
+.el-drawer {
+  .el-drawer__header {
+    border-bottom: 1px solid var(--el-border-color-light) !important;
+    margin-bottom: 0 !important;
+    height: 50px !important;
+    padding: 0 20px !important;
+    color: var(--base-text-color);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .el-message {
+    min-width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .el-message-box {
+    width: 300px !important;
+  }
+
+  .el-pagination__jump {
+    display: none !important;
+  }
+
+  .el-pagination__sizes {
+    display: none !important;
+  }
+}
+
+// dialog
+@media screen and (max-width: 700px) {
+  .el-dialog {
+    --el-dialog-width: 100% !important;
+  }
+  .el-drawer {
+    width: 85% !important;
+  }
+}
+
+// fix 顶部导航更多样式问题
+.el-menu--horizontal .el-sub-menu .el-sub-menu__icon-arrow {
+  right: calc(0px - var(--el-menu-base-level-padding)) !important;
+}
+
+.el-popper {
+  max-width: 100% !important;
+}
+
+.dark {
+  /** 全局滚动条样式 */
+  //滚动条的宽度
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: var(--base-menu-background);
+  }
+  // //滚动条的滑块
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--el-border-color-darker) !important;
+    border: 3.2px solid var(--base-menu-background);
+  }
+}

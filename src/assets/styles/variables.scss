@@ -1,0 +1,91 @@
+/* 默认主题风格 */
+:root {
+  // 主题色
+  --theme: #5b84f5;
+  --el-color-primary: #5b84f5;
+  // 成功色
+  --el-color-success: #67c23a;
+  // 提示色
+  --el-color-warning: #e6a23c;
+  // 警告色
+  --el-color-danger: #f56c6c;
+  // 信息色
+  --el-color-info: #909399;
+  // 文字颜色
+  --base-text-color: #333;
+  // sidebar 宽度
+  --el-aside-width: 235px;
+  // header 高度
+  --base-header-height: 50px;
+  // tags-view 高度
+  --base-tags-height: 34px;
+  // footer 高度
+  --base-footer-height: 30px;
+  // 登录框宽度
+  --base-login-width: 280px;
+  // sidebar 背景颜色
+  --base-menu-background: #324157;
+  // logo文字颜色
+  --base-logo-title-color: #fff;
+  // 主体区域背景色
+  --base-bg-main: #fff;
+  // box-shadow颜色
+  --base-box-shadow-color: rgba(0, 21, 41, 0.08);
+
+  /* element-plus css */
+  --el-menu-active-color: #5b84f5;
+  --el-overlay-color-light: rgba(0, 0, 0, 0.4);
+  --el-overlay-color-lighter: rgba(0, 0, 0, 0.4);
+  --el-menu-text-color: #e5eaf3;
+  --el-main-padding: 12px !important;
+  --el-border-radius-base: 2px !important;
+  --el-card-border-radius: 2px !important;
+  --el-color-primary-dark-2: #5c80e3;
+  --el-color-primary-light-3: #5c80e3;
+  --el-color-primary-light-5: #94b0ff;
+}
+/* 暗黑主题风格 */
+html.dark {
+  // 主题色
+  --theme: #5b84f5;
+  --el-color-primary: #5b84f5;
+  --base-color-white: #fff;
+  // 文字颜色
+  --base-text-color: #fff;
+  // sidebar 背景颜色
+  --base-menu-background: #001241;
+  // 主体区域背景色
+  --base-bg-main: #04133b;
+  // header 背景颜色
+  --base-topBar-background: #001241;
+  // box-shadow颜色
+  --base-box-shadow-color: rgba(3, 3, 3, 0.2);
+  // element-ui 样式
+  --el-bg-color-overlay: #001241;
+  --el-fill-color-light: #2a3866;
+  --el-bg-color: #030e2d;
+  --el-border-color-darker: #2a3866;
+  --el-border-color-dark: #2a3866;
+  --el-border-color: #2a3866;
+  --el-border-color-light: #2a3866;
+  --el-border-color-lighter: #2a3866;
+  --el-border-color-extra-light: #2a3866;
+  --el-fill-color: #202f66;
+  --el-fill-color-lighter: #011241;
+  --el-empty-fill-color-3: #04133b;
+  --el-color-primary-dark-2: #5c80e3;
+  --el-color-primary-light-3: #5c80e3;
+  --el-color-primary-light-5: #5c80e3;
+  --el-color-primary-light-9: #10204b;
+  --el-color-info-light-9: #10204b;
+  --el-color-info-light-5: #2a3866;
+  --el-color-info: #6a8bcc;
+}
+/* 色弱模式 */
+html.cafe {
+  filter: sepia(0.9) hue-rotate(315deg) brightness(0.9);
+}
+/* 灰色模式 */
+html.gray {
+  filter: grayscale(1);
+}

@@ -1,0 +1,52 @@
+/**
+* margin && padding 类名实现
+* 支持全方向或单方向
+* 例：margin: 10px 可以通过给dom元素添加类名 class="m10" 实现
+*    padding-right: 10px 可以通过给dom元素添加类名 class="pr10" 实现
+*/
+
+// margin
+@for $i from 0 through 100 {
+  .m#{$i} {
+    margin: $i + px;
+  }
+
+  .mt#{$i} {
+    margin-top: $i + px;
+  }
+
+  .mr#{$i} {
+    margin-right: $i + px;
+  }
+
+  .mb#{$i} {
+    margin-bottom: $i + px;
+  }
+
+  .ml#{$i} {
+    margin-left: $i + px;
+  }
+}
+
+// padding
+@for $i from 0 through 100 {
+  .p#{$i} {
+    padding: $i + px;
+  }
+
+  .pt#{$i} {
+    padding-top: $i + px;
+  }
+
+  .pr#{$i} {
+    padding-right: $i + px;
+  }
+
+  .pb#{$i} {
+    padding-bottom: $i + px;
+  }
+
+  .pl#{$i} {
+    padding-left: $i + px;
+  }
+}
