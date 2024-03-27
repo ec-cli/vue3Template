@@ -60,7 +60,7 @@ import ScrollPane from './ScrollPane'
 import { getNormalPath } from '@/utils/index'
 import useTagsViewStore from '@/store/modules/tagsView'
 // import useSettingsStore from '@/store/modules/settings'
-import usePermissionStore from '@/store/modules/permission'
+import usePermissionStore from '@/store/modules/permission1'
 import { isHttp } from '@/utils/validate'
 const visible = ref(false)
 const top = ref(0)

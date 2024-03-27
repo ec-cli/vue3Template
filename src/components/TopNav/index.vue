@@ -45,7 +45,7 @@ import { useRouter } from 'vue-router'
 import { getNormalPath } from '@/utils/index'
 import useAppStore from '@/store/modules/app'
 import useSettingsStore from '@/store/modules/settings'
-import usePermissionStore from '@/store/modules/permission'
+import usePermissionStore from '@/store/modules/permission1'
 
 // 顶部栏初始数
 const visibleNumber = ref(5)

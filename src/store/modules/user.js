@@ -1,9 +1,9 @@
 /*
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description: 用户登录信息管理
  * @Date: 2023-08-10 19:42:39
  * @LastEditors: rk
- * @LastEditTime: 2023-10-27 10:07:37
+ * @LastEditTime: 2024-03-27 17:08:33
  */
 import { ElLoading } from 'element-plus'
 import {
@@ -52,28 +52,36 @@ const useUserStore = defineStore('user', {
     // 登录
     login(userInfo) {
       return new Promise((resolve, reject) => {
-        login(userInfo)
-          .then((res) => {
-            if (res) {
-              if (res.errorCode === 500001) {
-                resolve(res) // then处理
-              } else {
-                setToken(res.accessToken)
-                setRefreshToken(res.refreshToken)
-                this.token = res.accessToken
-                this.refreshToken = res.refreshToken
-                setIsWeakPassword(res.isWeakPassword)
-                this.isWeakPassword = res.isWeakPassword + ''
-                resolve(res) // then处理
-              }
-            } else {
-              reject(false) // catch处理
-            }
-          })
-          .catch((error) => {
-            reject(error)
-          })
+        // login(userInfo)
+        //   .then((res) => {
+
+        // 临时模拟登录
+        const res = {
+          accessToken:
+            'eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjViYjdkMTNiLTNiNzQtNGQ2Zi05YWI4LTcyMTE1ODgzOTU4MiJ9.ElHMAUeU4XEX6kWQ1uOCwrDdGeeTaLtMW2uoRGVtRPzIMKN1djX43wfoj8_TdX5gBlOD2RZEU7uO-PuGWt_uUA',
+          refreshToken: 'xxxx',
+          isWeakPassword: false
+        }
+        if (res) {
+          if (res.errorCode === 500001) {
+            resolve(res) // then处理
+          } else {
+            setToken(res.accessToken)
+            setRefreshToken(res.refreshToken)
+            this.token = res.accessToken
+            this.refreshToken = res.refreshToken
+            setIsWeakPassword(res.isWeakPassword)
+            this.isWeakPassword = res.isWeakPassword + ''
+            resolve(res) // then处理
+          }
+        } else {
+          reject(false) // catch处理
+        }
       })
+      //     .catch((error) => {
+      //       reject(error)
+      //     })
+      // })
     },
     // 刷新token令牌
     updateToken() {
@@ -132,35 +140,45 @@ const useUserStore = defineStore('user', {
         systemLoadingInstance = ElLoading.service({
           text: '正在拉取用户信息，请稍候'
         })
-        getInfo()
-          .then((res) => {
-            systemLoadingInstance.close()
-            if (res) {
-              const avatar = !res.avatar ? defAva : res.avatar
-              if (res.roles && res.roles.length > 0) {
-                // 验证返回的roles是否是一个非空数组
-                this.roles = res.roles
-                this.permissions = res.permissions
-              } else {
-                this.roles = ['ROLE_DEFAULT']
-              }
-              cache.local.set('userInfo', JSON.stringify(res))
-              this.name = res.nickname
-              this.avatar = avatar
-              this.userInfo = res
-              this.userId = res.userId
-              this.userName = res.account
-              resolve(res)
-            } else {
-              reject('获取用户信息失败')
-            }
-          })
-          .catch((error) => {
-            systemLoadingInstance.close()
-            console.error(error)
-            reject('获取用户信息失败')
-          })
+        // getInfo()
+        //   .then((res) => {
+
+        // 临时模拟用户信息
+        const res = {
+          avatar: '',
+          roles: ['admin'],
+          permissions: ['*'],
+          nickname: 'admin',
+          userId: 1,
+          account: 'admin'
+        }
+        systemLoadingInstance.close()
+        if (res) {
+          const avatar = !res.avatar ? defAva : res.avatar
+          if (res.roles && res.roles.length > 0) {
+            // 验证返回的roles是否是一个非空数组
+            this.roles = res.roles
+            this.permissions = res.permissions
+          } else {
+            this.roles = ['ROLE_DEFAULT']
+          }
+          cache.local.set('userInfo', JSON.stringify(res))
+          this.name = res.nickname
+          this.avatar = avatar
+          this.userInfo = res
+          this.userId = res.userId
+          this.userName = res.account
+          resolve(res)
+        } else {
+          reject('获取用户信息失败')
+        }
       })
+      //     .catch((error) => {
+      //       systemLoadingInstance.close()
+      //       console.error(error)
+      //       reject('获取用户信息失败')
+      //     })
+      // })
     },
     // 退出登录
     logOut() {

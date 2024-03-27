@@ -1,9 +1,9 @@
 <!--
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description: 常用功能
  * @Date: 2023-08-21 09:49:48
  * @LastEditors: rk
- * @LastEditTime: 2023-11-02 10:19:30
+ * @LastEditTime: 2024-03-27 17:28:18
 -->
 <template>
   <div class="tool-wrap">
@@ -31,7 +31,7 @@
     :image-size="80" />
 </template>
 <script setup>
-import usePermissionStore from '@/store/modules/permission'
+import usePermissionStore from '@/store/modules/permission1'
 
 const props = defineProps({
   modelValue: {

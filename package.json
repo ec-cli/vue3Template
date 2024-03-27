@@ -1,8 +1,8 @@
 {
   "name": "vue-project-template",
   "version": "1.0.0",
-  "description": "数据资源聚合管理平台",
-  "author": "tyx",
+  "description": "xxxx管理平台",
+  "author": "rk",
   "license": "MIT",
   "scripts": {
     "dev": "vite",

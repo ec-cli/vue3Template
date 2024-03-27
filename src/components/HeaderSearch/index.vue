@@ -43,7 +43,7 @@
 <script setup>
 import Fuse from 'fuse.js'
 import { isHttp } from '@/utils/validate'
-import usePermissionStore from '@/store/modules/permission'
+import usePermissionStore from '@/store/modules/permission1'
 import { getNormalPath, findItem, color16 } from '@/utils/index'
 const { proxy } = getCurrentInstance()
 const search = ref('')

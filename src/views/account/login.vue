@@ -6,7 +6,7 @@
     <div class="login-header">
       <div class="logo"></div>
       <div class="txt">
-        <h2>数据资源聚合管理平台</h2>
+        <h2>xxxx管理平台</h2>
         <h4>Resource Aggregation Management Platform</h4>
       </div>
     </div>

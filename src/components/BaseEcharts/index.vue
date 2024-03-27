@@ -1,9 +1,9 @@
 <!--
- * @Author: likunxia likunxia@fpwis.com
- * @Date: 2023-09-05 09:06:46
- * @LastEditors: tuoyouxin@fpwis.com
- * @LastEditTime: 2023-12-21 11:26:51
+ * @Author: rk
  * @Description: echarts封装
+ * @Date: 2023-09-05 09:06:46
+ * @LastEditors: rk
+ * @LastEditTime: 2023-12-21 11:26:51
 -->
 
 <template>

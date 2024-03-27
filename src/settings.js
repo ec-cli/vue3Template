@@ -1,9 +1,9 @@
 /*
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description:
  * @Date: 2023-08-10 19:42:39
- * @LastEditors: tuoyouxin@fpwis.com
- * @LastEditTime: 2023-12-21 10:22:50
+ * @LastEditors: rk
+ * @LastEditTime: 2024-03-27 17:27:45
  */
 export default {
   /**
@@ -30,7 +30,7 @@ export default {
   /**
    * 是否显示顶部导航
    */
-  topNav: true,
+  topNav: false,
 
   /**
    * 是否显示 tagsView
@@ -62,7 +62,7 @@ export default {
   /**
    * 版权信息
    */
-  copyright: 'Copyright ©2023 数据资源聚合管理平台 All Rights Reserved.',
+  copyright: 'Copyright ©2023 xxxx管理平台 All Rights Reserved.',
   /**
    * 是否显示底部栏
    */

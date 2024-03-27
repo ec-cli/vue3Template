@@ -1,9 +1,9 @@
 <!--
- * @Author: 夏天 likunxia@fpwis.com
+ * @Author: rk
+ * @Description: 搜索框封装
  * @Date: 2023-10-08 16:50:09
  * @LastEditors: rk
  * @LastEditTime: 2023-11-02 10:28:26
- * @Description: 搜索框封装
 -->
 <template>
   <el-card class="mb15 search-card">

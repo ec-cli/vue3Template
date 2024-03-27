@@ -1,12 +1,12 @@
 /*
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description:
  * @Date: 2023-08-10 19:42:39
- * @LastEditors: tuoyouxin@fpwis.com
+ * @LastEditors: rk
  * @LastEditTime: 2023-10-30 18:11:22
  */
 import { createApp } from 'vue'
-import "default-passive-events"
+import 'default-passive-events'
 import '@/assets/styles/index.scss' // global css
 import ElementPlus from 'element-plus'
 
@@ -35,7 +35,7 @@ import {
   selectDictLabel,
   downloadFile
 } from '@/utils/index'
-import { parseTime, addDateRange } from "@/utils/date"
+import { parseTime, addDateRange } from '@/utils/date'
 import components from '@/components/index.js'
 import zhLocale from 'element-plus/es/locale/lang/zh-cn'
 

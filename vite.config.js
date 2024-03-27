@@ -1,9 +1,9 @@
 /*
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description: vite配置
  * @Date: 2023-08-10 19:42:39
  * @LastEditors: rk
- * @LastEditTime: 2023-12-12 19:47:15
+ * @LastEditTime: 2024-03-27 16:38:46
  */
 import { defineConfig, loadEnv } from 'vite'
 import path from 'path'

@@ -1,8 +1,8 @@
 /*
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description: 时间相关工具类
  * @Date: 2023-10-26 15:27:22
- * @LastEditors: tuoyouxin@fpwis.com
+ * @LastEditors: rk
  * @LastEditTime: 2023-10-26 16:50:08
  */
 import dayjs from 'dayjs'

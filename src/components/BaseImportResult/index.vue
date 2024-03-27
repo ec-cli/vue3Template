@@ -1,9 +1,9 @@
 <!--
- * @Author: yangchenguang
+ * @Author: rk
  * @Description: 文件上传结果弹窗
  * @Date: 2023-09-11 16:18:46
  * @LastEditors: rk
- * @LastEditTime: 2023-11-02 10:25:12
+ * @LastEditTime: 2024-03-27 16:43:23
 -->
 <template>
   <el-dialog

@@ -132,7 +132,7 @@ import { getLightColor } from '@/utils/index'
 import { getmark } from '@/utils/wartermark'
 import useAppStore from '@/store/modules/app'
 import useSettingsStore from '@/store/modules/settings'
-import usePermissionStore from '@/store/modules/permission'
+import usePermissionStore from '@/store/modules/permission1'
 import useUserStore from '@/store/modules/user'
 const { proxy } = getCurrentInstance()
 const appStore = useAppStore()

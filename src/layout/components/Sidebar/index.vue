@@ -1,9 +1,9 @@
 <!--
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description:
  * @Date: 2023-08-10 19:42:39
  * @LastEditors: rk
- * @LastEditTime: 2023-10-20 10:52:36
+ * @LastEditTime: 2024-03-27 17:18:14
 -->
 <template>
   <el-aside
@@ -35,7 +35,7 @@ import Logo from './Logo'
 import SidebarItem from './SidebarItem'
 import useAppStore from '@/store/modules/app'
 import useSettingsStore from '@/store/modules/settings'
-import usePermissionStore from '@/store/modules/permission'
+import usePermissionStore from '@/store/modules/permission1'
 
 const route = useRoute()
 const appStore = useAppStore()

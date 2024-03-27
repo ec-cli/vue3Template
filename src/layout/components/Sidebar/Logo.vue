@@ -1,9 +1,9 @@
 <!--
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description:logo组件
  * @Date: 2023-08-10 19:42:39
- * @LastEditors: tuoyouxin@fpwis.com
- * @LastEditTime: 2023-10-20 10:53:08
+ * @LastEditors: rk
+ * @LastEditTime: 2024-03-27 17:17:12
 -->
 <template>
   <div class="sidebar-logo-container" :class="{ collapse: collapse }">
@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import logo from '@/assets/logo/logo1.png'
+// import logo from '@/assets/logo/logo1.png'
 import useSettingsStore from '@/store/modules/settings'
 
 defineProps({

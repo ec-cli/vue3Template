@@ -1,8 +1,8 @@
 /*
- * @Author: yangchenguang
+ * @Author: rk
  * @Description: 获取select对应id的名称, 一般在模板中使用
  * @Date: 2023-10-10 16:36:29
- * @LastEditors: yangchenguang
+ * @LastEditors: rk
  * @LastEditTime: 2023-10-10 17:02:43
  */
 

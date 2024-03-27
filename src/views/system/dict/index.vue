@@ -3,7 +3,7 @@
  * @Description: 字典
  * @Date: 2023-08-23 09:47:45
  * @LastEditors: rk
- * @LastEditTime: 2023-11-02 09:46:19
+ * @LastEditTime: 2024-03-27 17:25:16
 -->
 <template>
   <div class="app-container">
@@ -99,7 +99,6 @@
       </el-row>
 
       <el-table
-        v-loading="loading"
         ref="dataTable"
         :data="typeList"
         :default-sort="defaultSort"
@@ -252,7 +251,7 @@ const { queryParams, statusOptions } = toRefs(state)
 
 // 查询字典类型列表
 const getTableList = () => {
-  loading.value = true
+  // loading.value = true
   listType(queryParams.value).then((res) => {
     if (res) {
       typeList.value = res.data
@@ -337,5 +336,5 @@ const sortChange = (column) => {
   getTableList()
 }
 
-getTableList()
+// getTableList()
 </script>

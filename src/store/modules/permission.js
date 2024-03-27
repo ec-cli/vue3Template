@@ -1,13 +1,13 @@
 /*
- * @Author: tuoyouxin@fpwis.com
+ * @Author: rk
  * @Description: 动态路由管理
  * @Date: 2023-08-10 19:42:39
  * @LastEditors: rk
- * @LastEditTime: 2023-11-07 10:10:59
+ * @LastEditTime: 2024-03-27 17:22:24
  */
 import { ElLoading } from 'element-plus'
 import { constantRoutes } from '@/router'
-import { getRouters } from '@/api/system/menu'
+// import { getRouters } from '@/api/system/menu'
 import Layout from '@/layout/index'
 import ParentView from '@/components/ParentView'
 import InnerLink from '@/layout/components/InnerLink'
@@ -48,30 +48,177 @@ const usePermissionStore = defineStore('permission', {
           text: '正在拉取路由信息，请稍候'
         })
         // 向后端请求路由数据
-        getRouters()
-          .then((res) => {
-            systemLoadingInstance.close()
-            if (res) {
-              const sdata = JSON.parse(JSON.stringify(res))
-              const rdata = JSON.parse(JSON.stringify(res))
-              const defaultData = JSON.parse(JSON.stringify(res))
-              const sidebarRoutes = filterAsyncRouter(sdata)
-              const rewriteRoutes = filterAsyncRouter(rdata, false, true)
-              const defaultRoutes = filterAsyncRouter(defaultData)
-              this.setRoutes(rewriteRoutes)
-              this.setSidebarRouters(constantRoutes.concat(sidebarRoutes))
-              this.setDefaultRoutes(sidebarRoutes)
-              this.setTopbarRoutes(defaultRoutes)
-              this.setCommonlyUsedRoutes()
-              resolve(rewriteRoutes)
-            } else {
-              reject('获取路由信息失败')
+        // getRouters()
+        //   .then((res) => {
+
+        // 模拟路由接口
+        const res = {
+          code: 200,
+          msg: 'success',
+          data: [
+            {
+              id: 1,
+              menuName: '系统管理',
+              parentId: 0,
+              component: null,
+              sectionName: null,
+              path: 'system',
+              permission: null,
+              icon: 'system',
+              redirect: null,
+              alwaysShow: 1,
+              isFrame: 1,
+              isCache: 1,
+              menuType: 1,
+              visible: 0,
+              sort: 99,
+              status: 0,
+              creator: null,
+              createTime: '2023-08-10 15:13:56',
+              reviser: '1',
+              reviserTime: '2023-09-28 14:30:44',
+              children: [
+                {
+                  id: 16,
+                  menuName: '租户管理',
+                  parentId: 1,
+                  component: 'system/tenant/index',
+                  sectionName: null,
+                  path: 'tenant',
+                  permission: 'system:tenant:list',
+                  icon: 'permission',
+                  redirect: null,
+                  alwaysShow: 1,
+                  isFrame: 1,
+                  isCache: 1,
+                  menuType: 2,
+                  visible: 0,
+                  sort: 1,
+                  status: 0,
+                  creator: null,
+                  createTime: '2023-08-25 10:32:55',
+                  reviser: null,
+                  reviserTime: '2023-08-30 15:53:50',
+                  children: null
+                },
+                {
+                  id: 2,
+                  menuName: '用户管理',
+                  parentId: 1,
+                  component: 'system/user/index',
+                  sectionName: null,
+                  path: 'user',
+                  permission: 'system:user:list',
+                  icon: 'user',
+                  redirect: null,
+                  alwaysShow: 1,
+                  isFrame: 1,
+                  isCache: 1,
+                  menuType: 2,
+                  visible: 0,
+                  sort: 2,
+                  status: 0,
+                  creator: null,
+                  createTime: '2023-08-10 18:55:27',
+                  reviser: null,
+                  reviserTime: '2023-08-29 17:39:39',
+                  children: null
+                },
+                {
+                  id: 3,
+                  menuName: '角色管理',
+                  parentId: 1,
+                  component: 'system/role/index',
+                  sectionName: null,
+                  path: 'role',
+                  permission: 'system:role:list',
+                  icon: 'role',
+                  redirect: null,
+                  alwaysShow: 1,
+                  isFrame: 1,
+                  isCache: 1,
+                  menuType: 2,
+                  visible: 0,
+                  sort: 3,
+                  status: 0,
+                  creator: null,
+                  createTime: '2023-08-10 18:55:39',
+                  reviser: null,
+                  reviserTime: '2023-08-29 17:01:30',
+                  children: null
+                },
+                {
+                  id: 4,
+                  menuName: '菜单管理',
+                  parentId: 1,
+                  component: 'system/menu/index',
+                  sectionName: null,
+                  path: 'menu',
+                  permission: 'system:menu:list',
+                  icon: 'ele-Menu',
+                  redirect: null,
+                  alwaysShow: 1,
+                  isFrame: 1,
+                  isCache: 1,
+                  menuType: 2,
+                  visible: 0,
+                  sort: 4,
+                  status: 0,
+                  creator: null,
+                  createTime: '2023-08-10 18:55:51',
+                  reviser: null,
+                  reviserTime: '2023-08-30 15:53:35',
+                  children: null
+                },
+                {
+                  id: 17,
+                  menuName: '字典管理',
+                  parentId: 1,
+                  component: 'system/dict/index',
+                  sectionName: null,
+                  path: 'dict',
+                  permission: 'system:dict:list',
+                  icon: 'dict',
+                  redirect: null,
+                  alwaysShow: 1,
+                  isFrame: 1,
+                  isCache: 1,
+                  menuType: 2,
+                  visible: 0,
+                  sort: 5,
+                  status: 0,
+                  creator: null,
+                  createTime: '2023-08-28 09:37:07',
+                  reviser: null,
+                  reviserTime: '2023-08-28 09:52:06',
+                  children: null
+                }
+              ]
             }
-          })
-          .catch(() => {
-            systemLoadingInstance.close()
-            reject('获取路由信息失败')
-          })
+          ]
+        }
+        systemLoadingInstance.close()
+        if (res) {
+          const sdata = JSON.parse(JSON.stringify(res.data))
+          const rdata = JSON.parse(JSON.stringify(res.data))
+          const defaultData = JSON.parse(JSON.stringify(res.data))
+          const sidebarRoutes = filterAsyncRouter(sdata)
+          const rewriteRoutes = filterAsyncRouter(rdata, false, true)
+          const defaultRoutes = filterAsyncRouter(defaultData)
+          this.setRoutes(rewriteRoutes)
+          this.setSidebarRouters(constantRoutes.concat(sidebarRoutes))
+          this.setDefaultRoutes(sidebarRoutes)
+          this.setTopbarRoutes(defaultRoutes)
+          this.setCommonlyUsedRoutes()
+          resolve(rewriteRoutes)
+        } else {
+          reject('获取路由信息失败')
+        }
+        // })
+        // .catch(() => {
+        //   systemLoadingInstance.close()
+        //   reject('获取路由信息失败')
+        // })
       })
     },
     // 设置常用路由
@@ -170,10 +317,8 @@ function filterChildren(childrenMap, lastRouter = false) {
 
 export const loadView = (view) => {
   let res
-
   for (const path in modules) {
     const dir = path.split('views/')[1].split('.vue')[0]
-
     if (dir === view) {
       res = () => modules[path]()
     }
